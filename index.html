@@ -4,217 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Humanwissenschaftliche Abteilung - Universität zu Köln</title>
-
 <style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e6e6e6;
-}
-
-/* Header */
-.header {
-    background-color: #0b3d6d;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 8px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    margin-top: 10px;
-    z-index: 1;
-    left: 0;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown.active .dropdown-content {
-    display: block;
-}
-
-.header-title {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.header-right img {
-    height: 45px;
-}
-
-/* Content */
-.content {
-    background-color: white;
-    margin: 40px auto;
-    padding: 40px;
-    width: 75%;
-    border-radius: 4px;
-    max-width: 1000px;
-}
-
-h2 {
-    color: #0b3d6d;
-}
-
-h3 {
-    color: #0b3d6d;
-}
-
-p {
-    line-height: 1.6;
-}
-
-/* HWA-Info */
-.hwa-info {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-left: 4px solid #0b3d6d;
-    margin: 20px 0;
-}
-
-/* Stationen */
-.station {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid #ccc;
-}
-
-.station h2 {
-    margin-top: 0;
-}
-
-/* Regeln-Liste (ohne Emojis) */
-.rules-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.rules-list li {
-    padding: 8px 0;
-    position: relative;
-    padding-left: 25px;
-}
-
-.rules-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-    color: #0b3d6d;
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#e6e6e6;line-height:1.6;}
+.header{background:#0b3d6d;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;}
+.dropdown{position:relative;display:inline-block;}
+.dropbtn{background:none;border:none;color:#fff;font-size:18px;cursor:pointer;padding:8px;}
+.dropdown-content{display:none;position:absolute;background:#fff;min-width:220px;box-shadow:0 4px 8px rgba(0,0,0,.2);margin-top:10px;z-index:1;}
+.dropdown-content a{color:#000;padding:12px 16px;text-decoration:none;display:block;}
+.dropdown-content a:hover{background:#f1f1f1;}
+.dropdown.active .dropdown-content{display:block;}
+.header-title{font-size:20px;font-weight:700;}
+.header-right img{height:45px;}
+.content{background:#fff;margin:40px auto;padding:40px;width:75%;max-width:1000px;border-radius:4px;}
+h2,h3{color:#0b3d6d;}
+.hwa-info{background:#f8f9fa;padding:20px;border-left:4px solid #0b3d6d;margin:20px 0;}
+@media (max-width:768px){.content{width:95%;padding:20px;}}
 </style>
 </head>
-
 <body>
-
 <div class="header">
-    <div class="dropdown" id="stationenDropdown">
-        <button class="dropbtn" onclick="toggleDropdown()">☰ Stationen</button>
+    <div class="dropdown" id="menu">
+        <button class="dropbtn" onclick="toggleMenu()">☰ Stationen</button>
         <div class="dropdown-content">
-            <a href="#station1">Lesesaal HWA</a>
-            <a href="#station2">Station 2</a>
-            <a href="#station3">Station 3</a>
+            <a href="station-lesesaal-hwa.html">Lesesaal HWA</a>
+            <!-- Station 2 & 3 hier einfügen -->
         </div>
     </div>
-
-    <div class="header-title">
-        Humanwissenschaftliche Abteilung – Universität zu Köln
-    </div>
-
+    <div class="header-title">Humanwissenschaftliche Abteilung – Universität zu Köln</div>
     <div class="header-right">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Universitaet_zu_Koeln_Logo.jpg/1280px-Universitaet_zu_Koeln_Logo.jpg" alt="Logo Universität zu Köln">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Universitaet_zu_Koeln_Logo.jpg/1280px-Universitaet_zu_Koeln_Logo.jpg" alt="UoC Logo">
     </div>
 </div>
-
 <div class="content">
-
     <h2>Startseite</h2>
-
     <h3>Willkommen in der Humanwissenschaftlichen Abteilung der Universität zu Köln.</h3>
-
     <p>Auf dieser Homepage finden Sie ausführliche Informationen der wichtigsten Stationen der Bibliothek.</p>
-
     <p>Dieses Wiki unterstützt eine 360° Tour, die von Master Student*innen der Geographie im Rahmen des Seminars „Virtueller Campus" konzipiert und erstellt wurde.</p>
-
     <div class="hwa-info">
         <p>Die Humanwissenschaftliche Abteilung (HWA) versorgt die Humanwissenschaftliche Fakultät mit Literatur aus den Sammelgebieten Pädagogik, Psychologie, Rehabilitationswissenschaft, Soziologie des Kindes- und Jugendalters und Didaktik. Der Bestand umfasst rund 100.000 Monographien, darunter mehr als 10.000 Lehrbuch-Exemplare, 1.200 Zeitschriftentitel, davon 100 laufende Abonnements und über 400 psychologische Testverfahren.</p>
         <p>Informationen rund um das Angebot der HWA finden Sie auf unserer <a href="https://ub.uni-koeln.de/die-usb/hwa">Website</a>.</p>
     </div>
-
     <p>Klicken Sie auf <strong>Stationen</strong>, um zu den Texten zu gelangen.</p>
-
-    <!-- Station 1: Lesesaal HWA -->
-    <section id="station1" class="station">
-        <h2>Lesesaal HWA</h2>
-        <p>Der Lesesaal ist ein Ruhearbeitsbereich. Der Lesesaal befindet sich im <strong>Erdgeschoss von Gebäude 216, Bauteil 2, Gronewaldstraße 2</strong>.</p>
-        <p><strong>Öffnungszeiten:</strong> 9 bis 16 Uhr.</p>
-        <p>Der Lesesaal ist für Uni-Angehörige und externe Besucher*innen frei zugänglich.</p>
-        
-        <h3>Hausregeln</h3>
-        <ul class="rules-list">
-            <li>Taschen müssen in den Schließfächern vor dem Lesesaal eingeschlossen werden.</li>
-            <li>Das Mitbringen von Getränken in verschließbaren Flaschen ist erlaubt.</li>
-            <li>Essen ist nicht erlaubt.</li>
-            <li>Vor dem Lesesaal befinden sich Schließfächer. Einen Schlüssel für ein Schließfach bekommen Sie gegen ein Pfand an der Lesesaaltheke.</li>
-        </ul>
-        <p><em>Platzhalter für 360°-Tour oder Bilder.</em></p>
-    </section>
-
-    <!-- Station 2 -->
-    <section id="station2" class="station">
-        <h2>Station 2</h2>
-        <p><em>Hier kommt der Inhalt zu Station 2.</em></p>
-    </section>
-
-    <!-- Station 3 -->
-    <section id="station3" class="station">
-        <h2>Station 3</h2>
-        <p><em>Hier kommt der Inhalt zu Station 3.</em></p>
-    </section>
-
 </div>
-
 <script>
-function toggleDropdown() {
-    document.getElementById('stationenDropdown').classList.toggle('active');
-}
-document.addEventListener('click', function(event) {
-    const dropdown = document.getElementById('stationenDropdown');
-    if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove('active');
-    }
-});
+function toggleMenu(){document.getElementById('menu').classList.toggle('active');}
+document.addEventListener('click',e=>{const m=document.getElementById('menu');if(!m.contains(e.target))m.classList.remove('active');});
 </script>
-
 </body>
 </html>
