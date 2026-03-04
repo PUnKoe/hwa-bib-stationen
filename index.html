@@ -12,7 +12,7 @@ body {
     background-color: #e6e6e6;
 }
 
-/* ===== HEADER ===== */
+/* Header */
 .header {
     background-color: #0b3d6d;
     color: white;
@@ -72,13 +72,14 @@ body {
     height: 45px;
 }
 
-/* ===== CONTENT ===== */
+/* Content */
 .content {
     background-color: white;
     margin: 40px auto;
     padding: 40px;
     width: 75%;
     border-radius: 4px;
+    max-width: 1000px;
 }
 
 h2 {
@@ -93,7 +94,7 @@ p {
     line-height: 1.6;
 }
 
-/* HWA-Info-Block */
+/* HWA-Info */
 .hwa-info {
     background-color: #f8f9fa;
     padding: 20px;
@@ -101,7 +102,7 @@ p {
     margin: 20px 0;
 }
 
-/* Stationen-Abschnitte */
+/* Stationen */
 .station {
     margin-top: 60px;
     padding-top: 40px;
@@ -112,26 +113,24 @@ p {
     margin-top: 0;
 }
 
-/* Regeln-Liste */
+/* Regeln-Liste (ohne Emojis) */
 .rules-list {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .rules-list li {
     padding: 8px 0;
-    display: flex;
-    align-items: center;
+    position: relative;
+    padding-left: 25px;
 }
 
 .rules-list li::before {
-    content: "📖";
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-.rules-list li.warning::before {
-    content: "⚠️";
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #0b3d6d;
 }
 </style>
 </head>
@@ -139,7 +138,26 @@ p {
 <body>
 
 <div class="header">
-
-    <!-- Dropdown Menü -->
     <div class="dropdown" id="stationenDropdown">
-        <button class="dropbtn" onclick="toggleDropdown()">☰ Sta
+        <button class="dropbtn" onclick="toggleDropdown()">☰ Stationen</button>
+        <div class="dropdown-content">
+            <a href="#station1">Lesesaal HWA</a>
+            <a href="#station2">Station 2</a>
+            <a href="#station3">Station 3</a>
+        </div>
+    </div>
+
+    <div class="header-title">
+        Humanwissenschaftliche Abteilung – Universität zu Köln
+    </div>
+
+    <div class="header-right">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Universitaet_zu_Koeln_Logo.jpg/1280px-Universitaet_zu_Koeln_Logo.jpg" alt="Logo Universität zu Köln">
+    </div>
+</div>
+
+<div class="content">
+
+    <h2>Startseite</h2>
+
+    <h3>Willkommen in der Humanwissenschaftlichen Abteilung der Universität zu Köln.</h3>
