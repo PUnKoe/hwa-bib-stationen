@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meine Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Content */
+.content {
+    padding: 100px 20px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">☰ Stationen</button>
+        <div class="dropdown-content">
+            <a href="#station1">Station 1</a>
+            <a href="#station2">Station 2</a>
+            <a href="#station3">Station 3</a>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <h1>Willkommen auf meiner Website</h1>
+    <p>Hier findest du verschiedene Stationen im Menü oben links.</p>
+
+    <h2 id="station1">Station 1</h2>
+    <p>Inhalt von Station 1</p>
+
+    <h2 id="station2">Station 2</h2>
+    <p>Inhalt von Station 2</p>
+
+    <h2 id="station3">Station 3</h2>
+    <p>Inhalt von Station 3</p>
+</div>
+
+</body>
+</html>
