@@ -161,3 +161,60 @@ p {
     <h2>Startseite</h2>
 
     <h3>Willkommen in der Humanwissenschaftlichen Abteilung der Universität zu Köln.</h3>
+
+    <p>Auf dieser Homepage finden Sie ausführliche Informationen der wichtigsten Stationen der Bibliothek.</p>
+
+    <p>Dieses Wiki unterstützt eine 360° Tour, die von Master Student*innen der Geographie im Rahmen des Seminars „Virtueller Campus" konzipiert und erstellt wurde.</p>
+
+    <div class="hwa-info">
+        <p>Die Humanwissenschaftliche Abteilung (HWA) versorgt die Humanwissenschaftliche Fakultät mit Literatur aus den Sammelgebieten Pädagogik, Psychologie, Rehabilitationswissenschaft, Soziologie des Kindes- und Jugendalters und Didaktik. Der Bestand umfasst rund 100.000 Monographien, darunter mehr als 10.000 Lehrbuch-Exemplare, 1.200 Zeitschriftentitel, davon 100 laufende Abonnements und über 400 psychologische Testverfahren.</p>
+        <p>Informationen rund um das Angebot der HWA finden Sie auf unserer <a href="https://ub.uni-koeln.de/die-usb/hwa">Website</a>.</p>
+    </div>
+
+    <p>Klicken Sie auf <strong>Stationen</strong>, um zu den Texten zu gelangen.</p>
+
+    <!-- Station 1: Lesesaal HWA -->
+    <section id="station1" class="station">
+        <h2>Lesesaal HWA</h2>
+        <p>Der Lesesaal ist ein Ruhearbeitsbereich. Der Lesesaal befindet sich im <strong>Erdgeschoss von Gebäude 216, Bauteil 2, Gronewaldstraße 2</strong>.</p>
+        <p><strong>Öffnungszeiten:</strong> 9 bis 16 Uhr.</p>
+        <p>Der Lesesaal ist für Uni-Angehörige und externe Besucher*innen frei zugänglich.</p>
+        
+        <h3>Hausregeln</h3>
+        <ul class="rules-list">
+            <li>Taschen müssen in den Schließfächern vor dem Lesesaal eingeschlossen werden.</li>
+            <li>Das Mitbringen von Getränken in verschließbaren Flaschen ist erlaubt.</li>
+            <li>Essen ist nicht erlaubt.</li>
+            <li>Vor dem Lesesaal befinden sich Schließfächer. Einen Schlüssel für ein Schließfach bekommen Sie gegen ein Pfand an der Lesesaaltheke.</li>
+        </ul>
+        <p><em>Platzhalter für 360°-Tour oder Bilder.</em></p>
+    </section>
+
+    <!-- Station 2 -->
+    <section id="station2" class="station">
+        <h2>Station 2</h2>
+        <p><em>Hier kommt der Inhalt zu Station 2.</em></p>
+    </section>
+
+    <!-- Station 3 -->
+    <section id="station3" class="station">
+        <h2>Station 3</h2>
+        <p><em>Hier kommt der Inhalt zu Station 3.</em></p>
+    </section>
+
+</div>
+
+<script>
+function toggleDropdown() {
+    document.getElementById('stationenDropdown').classList.toggle('active');
+}
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('stationenDropdown');
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove('active');
+    }
+});
+</script>
+
+</body>
+</html>
